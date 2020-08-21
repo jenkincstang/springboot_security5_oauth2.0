@@ -2,12 +2,9 @@ package cn.hinson.security;
 
 import cn.hinson.domain.SysRole;
 import cn.hinson.domain.SysUser;
-import cn.hinson.service.UserService;
+import cn.hinson.service.SysUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.security.oauth2.resource.PrincipalExtractor;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.security.oauth2.provider.authentication.OAuth2AuthenticationDetails;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,7 +13,7 @@ import java.util.Map;
 public abstract class AbstractPrincipalExtractor implements PrincipalExtractor {
 
   @Autowired
-  UserService userService;
+  SysUserService sysUserService;
   //用户openid
   public abstract SysUser getUserByOpenId(String id);
   //用户角色，用“FACEBOOK"代表facebook用户，”GITHUB"代表"github用户
@@ -44,8 +41,8 @@ public abstract class AbstractPrincipalExtractor implements PrincipalExtractor {
       authorities.add(role);
       //Oauth2Client客戶端特有角色
       authorities.add(getUserRoleByOauth2ClientName());
-      user.setRoles(authorities);
-      userService.createUser(user);
+      user.setSysRoles(authorities);
+      sysUserService.saveSysUser(user);
     }
     return user.getUsername();
   }

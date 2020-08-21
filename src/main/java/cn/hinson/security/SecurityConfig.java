@@ -1,6 +1,5 @@
 package cn.hinson.security;
 
-import cn.hinson.dao.UserDao;
 import cn.hinson.security.oauth2.ClientResources;
 import cn.hinson.security.service.MyUserDetailsService;
 import cn.hinson.security.service.MyUserInfoTokenServices;

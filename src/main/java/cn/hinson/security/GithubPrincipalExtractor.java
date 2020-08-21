@@ -2,18 +2,18 @@ package cn.hinson.security;
 
 import cn.hinson.domain.SysRole;
 import cn.hinson.domain.SysUser;
-import cn.hinson.service.UserService;
+import cn.hinson.service.SysUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
 public class GithubPrincipalExtractor extends AbstractPrincipalExtractor {
     @Autowired
-    UserService userService;
+    SysUserService sysUserService;
     @Override
     public SysUser getUserByOpenId(String id) {
         System.out.println("GithubPrincipalExtractor");
-        return userService.getUserByGithubId(id);
+        return sysUserService.getUserByGithubId(id);
     }
 
     @Override

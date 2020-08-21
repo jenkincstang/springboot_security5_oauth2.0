@@ -1,14 +1,30 @@
 package cn.hinson.domain;
 
 import java.util.List;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
+import javax.persistence.Table;
 
+@Entity
+@Table(name = "sys_user")
 public class SysUser {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String username;
     private String password;
     private String facebookId;
     private String twitterId;
     private String githubId;
+    @ManyToMany
+    @JoinTable(name = "sys_role_user",joinColumns = @JoinColumn(name = "sys_user_id"),
+        inverseJoinColumns = @JoinColumn(name = "sys_role_id"))
+    private List<SysRole> sysRoles;
 
     public String getGithubId() {
         return githubId;
@@ -17,8 +33,6 @@ public class SysUser {
     public void setGithubId(String githubId) {
         this.githubId = githubId;
     }
-
-    private List<SysRole> roles;
 
     public Integer getId() {
         return id;
@@ -60,13 +74,11 @@ public class SysUser {
         this.twitterId = twitterId;
     }
 
-
-
-    public List<SysRole> getRoles() {
-        return roles;
+    public List<SysRole> getSysRoles() {
+        return sysRoles;
     }
 
-    public void setRoles(List<SysRole> roles) {
-        this.roles = roles;
+    public void setSysRoles(List<SysRole> sysRoles) {
+        this.sysRoles = sysRoles;
     }
 }

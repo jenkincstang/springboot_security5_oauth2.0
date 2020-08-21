@@ -9,7 +9,7 @@ public class FacebookPrincipalExtractor extends AbstractPrincipalExtractor {
 
     @Override
     public SysUser getUserByOpenId(String id) {
-        return super.userService.getUserByFacebookId(id);
+        return super.sysUserService.getUserByFacebookId(id);
     }
 
     @Override
