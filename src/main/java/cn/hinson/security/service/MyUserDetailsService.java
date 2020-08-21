@@ -27,7 +27,7 @@ public class MyUserDetailsService implements UserDetailsService { //自定义Use
   @Override
   public UserDetails loadUserByUsername(String username) { //重写loadUserByUsername 方法获得 userdetails 类型用户
     System.out.println("loadUserByUserName: " + username);
-    SysUser user = sysUserDao.findByUserName(username);
+    SysUser user = sysUserDao.findByUsername(username);
     if (user == null) {
       throw new UsernameNotFoundException("用户名不存在");
     }
@@ -35,7 +35,7 @@ public class MyUserDetailsService implements UserDetailsService { //自定义Use
     //用于添加用户的权限。只要把用户权限添加到authorities。
     for (SysRole role : user.getSysRoles()) {
       authorities.add(new SimpleGrantedAuthority(role.getName()));
-      System.out.println(role.getName());
+      System.out.println("RoleName:>>"+role.getName());
     }
     UserDetails userDetails = new User(user.getUsername(), user.getPassword(), authorities);
     logger.info("userDetails" + userDetails);

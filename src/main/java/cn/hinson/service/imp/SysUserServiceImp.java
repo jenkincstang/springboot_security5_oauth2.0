@@ -27,7 +27,7 @@ public class SysUserServiceImp implements SysUserService {
         BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
         sysUser.setUsername(userDto.getUsername());
         sysUser.setPassword(passwordEncoder.encode(userDto.getPassword()));
-        SysRole sysRole = sysRoleDao.findByName("ROLE_USER");
+        SysRole sysRole = sysRoleDao.findByName("USER");
         List<SysRole> roles = new ArrayList<>();
         roles.add(sysRole);
         sysUser.setSysRoles(roles);
@@ -41,7 +41,7 @@ public class SysUserServiceImp implements SysUserService {
 
     @Override
     public SysUser getUserByName(String username) {
-        return sysUserDao.findByName(username);
+        return sysUserDao.findByUsername(username);
     }
 
     @Override

@@ -2,10 +2,12 @@ package cn.hinson.dao;
 
 import cn.hinson.domain.SysUser;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public interface SysUserDao extends JpaRepository<SysUser, Integer> {
 
-  SysUser findByName(String username);
+  SysUser findByUsername(String username);
 
   SysUser findByFacebookId(String facebookId);
 

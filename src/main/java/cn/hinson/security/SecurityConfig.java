@@ -6,6 +6,7 @@ import cn.hinson.security.service.MyUserInfoTokenServices;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.autoconfigure.security.oauth2.resource.UserInfoTokenServices;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
@@ -26,6 +27,7 @@ import org.springframework.security.web.authentication.www.BasicAuthenticationFi
 import org.springframework.security.web.csrf.CookieCsrfTokenRepository;
 import org.springframework.web.filter.CompositeFilter;
 
+import javax.annotation.Resource;
 import javax.servlet.Filter;
 import java.util.ArrayList;
 import java.util.List;
@@ -35,7 +37,7 @@ import java.util.List;
 @EnableOAuth2Client
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
-    @Autowired
+    @Resource
     OAuth2ClientContext oauth2ClientContext;
 
     @Bean
@@ -55,7 +57,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         Log logger = LogFactory.getLog(SecurityConfig.class);
         logger.info("HttpSecurity http");
         http.antMatcher("/**").authorizeRequests()
-                .antMatchers("/","/login/github", "/login**", "/webjars/**", "/test").permitAll()
+                .antMatchers("/","/register","/login/github", "/login**", "/webjars/**", "/test").permitAll()
                 .anyRequest().authenticated().and().exceptionHandling()
                 .and()
                     .logout().

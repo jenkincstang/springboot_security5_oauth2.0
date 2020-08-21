@@ -14,23 +14,23 @@
     src="/webjars/bootstrap/js/bootstrap.min.js"></script>
 </head>
 <body>
-    <h1>Login</h1>
-    <h2>自定义登录页面</h2>
-    <!--<form action="/user/login" method="post">-->
-        <!--<table>-->
-            <!--<tr>-->
-                <!--<td>用户名：</td>-->
-                <!--<td><input type="text" name="username"></td>-->
-            <!--</tr>-->
-            <!--<tr>-->
-                <!--<td>密码：</td>-->
-                <!--<td><input type="password" name="password"></td>-->
-            <!--</tr>-->
-            <!--<tr>-->
-                <!--<td colspan="2"><button type="submit" value="login">登录</button></td>-->
-            <!--</tr>-->
-        <!--</table>-->
-    <!--</form>-->
+    <h1>Login && Register</h1>
+    <h2>注册和登录页面</h2>
+    <form action="/register" method="post">
+        <table>
+            <tr>
+                <td>用户名：</td>
+                <td><input type="text" name="username"></td>
+            </tr>
+            <tr>
+                <td>密码：</td>
+                <td><input type="password" name="password"></td>
+            </tr>
+            <tr>
+                <td colspan="2"><button type="submit" value="login">注册用户</button></td>
+            </tr>
+        </table>
+    </form>
     <div class="container unauthenticated">
         <div>
             With Facebook: <a href="/login/facebook">click here</a>
@@ -60,8 +60,10 @@
               }
             }
           });
+
           $.get("/user", function(data) {
             console.log(data);
+
             $("#user").html(data.principal.username);
             $(".unauthenticated").hide();
             $(".authenticated").show();
