@@ -60,8 +60,10 @@
               }
             }
           });
+
           $.get("/user", function(data) {
             console.log(data);
+
             $("#user").html(data.principal.username);
             $(".unauthenticated").hide();
             $(".authenticated").show();

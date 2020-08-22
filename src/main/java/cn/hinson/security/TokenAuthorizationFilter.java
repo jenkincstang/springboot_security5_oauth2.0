@@ -47,7 +47,7 @@ public class TokenAuthorizationFilter extends GenericFilterBean {
      */
     private String resolveToken(HttpServletRequest request){
         String token = request.getHeader(HEADER_NAME);
-        System.out.println("resolveToken: " + token);
+        System.out.println("resolveToken:>>> " + token);
         if(token==null||!token.startsWith("Bearer "))
             return null;
         else

@@ -7,12 +7,10 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.security.Principal;
 
@@ -27,15 +25,16 @@ public class SysUserController {
     this.sysUserService = sysUserService;
   }
 
-  @GetMapping("/user")
-  public Principal getUsers(Principal principal) {
+  @PostMapping("/user")
+  public Principal getUsers(@AuthenticationPrincipal Principal principal) {
     Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-    logger.info(authentication.getName());
+    logger.info("AuthenticationPrincipal Name:>>"+authentication.getName());
     return principal;
   }
 
   @PostMapping("/register")
   public String register(@RequestBody UserDto userDto) {
+    System.out.println("Register User");
     //访问这个url注册一个用户
     SysUser sysUser = new SysUser();
     BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();

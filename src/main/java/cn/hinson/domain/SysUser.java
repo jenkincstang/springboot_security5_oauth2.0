@@ -1,14 +1,7 @@
 package cn.hinson.domain;
 
 import java.util.List;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
-import javax.persistence.ManyToMany;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "sys_user")
@@ -18,8 +11,11 @@ public class SysUser {
     private Integer id;
     private String username;
     private String password;
+    @Column(name = "facebook_id")
     private String facebookId;
+    @Column(name = "twitter_id")
     private String twitterId;
+    @Column(name = "github_id")
     private String githubId;
     @ManyToMany
     @JoinTable(name = "sys_role_user",joinColumns = @JoinColumn(name = "sys_user_id"),
