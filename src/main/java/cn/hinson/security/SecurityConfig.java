@@ -57,7 +57,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         Log logger = LogFactory.getLog(SecurityConfig.class);
         logger.info("HttpSecurity http");
         http.antMatcher("/**").authorizeRequests()
-                .antMatchers("/","/register","/login/github", "/login**", "/webjars/**", "/test").permitAll()
+                .antMatchers("/","/register**","/login/github", "/login**", "/webjars/**").permitAll()
                 .anyRequest().authenticated().and().exceptionHandling()
                 .and()
                     .logout().

@@ -7,6 +7,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.JsonNodeFactory;
 import java.io.IOException;
 import java.io.Writer;
+import java.security.Principal;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -18,6 +19,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.User;
 import org.springframework.security.web.authentication.SavedRequestAwareAuthenticationSuccessHandler;
 import org.springframework.stereotype.Component;
 
@@ -43,10 +45,13 @@ public class SuccessHandler extends SavedRequestAwareAuthenticationSuccessHandle
     @Override
     public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response, Authentication authentication) throws IOException, ServletException {
 
-//        logger.info(authentication.getName());
-//        response.setStatus(HttpStatus.OK.value());
-//        response.setContentType(MediaType.APPLICATION_JSON_UTF8_VALUE);
-//
+        System.out.println("Authentication Name::>>>>"+authentication.getName());
+        response.setStatus(HttpStatus.OK.value());
+
+        Principal principal = ((HttpServletRequest)request).getUserPrincipal();
+        System.out.println("Principal Name:>>>>>>"+principal.getName());
+        //response.setContentType(MediaType.APPLICATION_JSON_UTF8_VALUE);
+
 //        try (Writer writer = response.getWriter()){
 //            JsonNode jsonNode = jsonNodeFactory.objectNode()
 //                .put("token",tokenUtils.generateToken(authentication));
@@ -54,13 +59,13 @@ public class SuccessHandler extends SavedRequestAwareAuthenticationSuccessHandle
 //        }catch (Exception e){
 //            e.printStackTrace();
 //        }
-        HttpSession session = request.getSession();
-        SysUser authUser = (SysUser) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-        session.setAttribute("username", authUser.getUsername());
-        session.setAttribute("authorities", authentication.getAuthorities());
-
-        //set our response to OK status
-        response.setStatus(HttpServletResponse.SC_OK);
+//        HttpSession session = request.getSession();
+//        User authUser = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+//        session.setAttribute("username", authUser.getUsername());
+//        session.setAttribute("authorities", authentication.getAuthorities());
+//
+//        //set our response to OK status
+//        response.setStatus(HttpServletResponse.SC_OK);
 
         //since we have created our custom success handler, its up to us to where
         //we will redirect the user after successfully login
