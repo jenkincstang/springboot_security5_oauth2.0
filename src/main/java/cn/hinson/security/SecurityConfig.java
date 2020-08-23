@@ -53,6 +53,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Autowired
     TokenAuthorizationFilter tokenAuthorizationFilter;
 
+    /**\
+     * 该方法用于设置权限，判定那些用户可以访问哪些资源
+     * @param http
+     * @throws Exception
+     */
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         // @formatter:off
@@ -81,13 +86,16 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Autowired
     public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
-
 //        auth.inMemoryAuthentication()
 //                .passwordEncoder(new BCryptPasswordEncoder())
 //                .withUser("user1")
 //                .password(new BCryptPasswordEncoder().encode("123456"))
 //                .roles("USER");
-
+        /*这个方法的主要作用是验证用户账户密码，
+        * 需要传入new BCryptPassword()进行密码加密，
+        * 用数据库信息来验证
+        * detailsService()返回MyUserDetailsService
+        * */
         auth.userDetailsService(detailsService()).passwordEncoder(new BCryptPasswordEncoder());
     }
 

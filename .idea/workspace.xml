@@ -20,35 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ebeaace7-08c5-417e-a3b9-680caad470db" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/hinson/security/MyLogoutSuccessHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resource/static/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resource/static/register.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/hinson/controller/SysUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/hinson/controller/SysUserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/hinson/domain/SysRole.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/hinson/domain/SysRole.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/hinson/domain/SysUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/hinson/domain/SysUser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/hinson/security/AbstractPrincipalExtractor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/hinson/security/AbstractPrincipalExtractor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/hinson/security/GithubPrincipalExtractor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/hinson/security/GithubPrincipalExtractor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/hinson/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/hinson/security/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/hinson/security/SuccessHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/hinson/security/MyAuthenticationSuccessHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/hinson/security/service/MyUserDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/hinson/security/service/MyUserDetailsService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/hinson/security/service/MyUserInfoTokenServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/hinson/security/service/MyUserInfoTokenServices.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resource/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resource/static/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/hinson/util/TokenUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/hinson/util/TokenUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/META-INF/spring-configuration-metadata.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/spring-configuration-metadata.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/hinson/controller/SysUserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/hinson/controller/SysUserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/hinson/domain/SysRole.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/hinson/domain/SysRole.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/hinson/domain/SysUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/hinson/domain/SysUser.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/hinson/security/AbstractPrincipalExtractor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/hinson/security/AbstractPrincipalExtractor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/hinson/security/GithubPrincipalExtractor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/hinson/security/GithubPrincipalExtractor.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/cn/hinson/security/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/hinson/security/SecurityConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/hinson/security/SuccessHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/hinson/security/service/MyUserInfoTokenServices.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/hinson/security/service/MyUserInfoTokenServices.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/springboot_security5_oauth2-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/springboot_security5_oauth2-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/springboot_security5_oauth2-1.0-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/springboot_security5_oauth2-1.0-SNAPSHOT.jar.original" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-cn.hinson.AppTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-cn.hinson.AppTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/cn.hinson.AppTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/cn.hinson.AppTest.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,6 +100,18 @@
       <recent name="G:\JAVACODE\IntelliJ IDEA\springboot_security5_oauth2\src\main\java\cn\hinson\config" />
       <recent name="G:\JAVACODE\IntelliJ IDEA\springboot_security5_oauth2\src\main" />
     </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
   </component>
   <component name="RunManager" selected="Application.App">
     <configuration default="true" type="Applet">
@@ -217,6 +207,7 @@
       <item itemvalue="Application.App" />
       <item itemvalue="Application.TokenUtils" />
       <item itemvalue="JUnit.AppTest.shouldAnswerWithTrue" />
+      <item itemvalue="Spring Boot.App" />
     </list>
     <recent_temporary>
       <list>
@@ -249,7 +240,7 @@
       <workItem from="1598066342267" duration="3223000" />
       <workItem from="1598112131374" duration="1808000" />
       <workItem from="1598115294310" duration="2538000" />
-      <workItem from="1598147501978" duration="24818000" />
+      <workItem from="1598147501978" duration="28974000" />
     </task>
     <servers />
   </component>
@@ -266,12 +257,13 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="765" y="203" key="#com.intellij.ide.util.MemberChooser" timestamp="1598006752726">

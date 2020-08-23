@@ -26,9 +26,6 @@ import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
 import sun.java2d.pipe.SpanShapeRenderer.Simple;
 
-/**
- * Created by xinshengshu on 2018/9/25.
- */
 @Component
 public class TokenUtils {
     //Secret 秘钥
@@ -55,7 +52,6 @@ public class TokenUtils {
         String authorities = collection.toString();
         Date now = Date.from(Instant.now());
         Date expiration = Date.from(ZonedDateTime.now().plusMinutes(VALIDATE_MINUTE).toInstant());
-
         logger.info(authentication.getPrincipal());
         //create jwt
         String jwt = JWT.create()

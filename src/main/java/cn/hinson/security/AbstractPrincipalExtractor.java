@@ -27,7 +27,7 @@ public abstract class AbstractPrincipalExtractor implements PrincipalExtractor {
 
   @Override
   public Object extractPrincipal(Map<String, Object> map) {
-    //得到对于的社交平台的openid
+    //得到对应的社交平台的openid
     String id =  map.get("id").toString();
     // Check if we've already registered this uer
     System.out.println("id: " + id);
