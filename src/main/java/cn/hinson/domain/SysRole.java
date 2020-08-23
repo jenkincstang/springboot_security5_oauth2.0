@@ -1,12 +1,7 @@
 package cn.hinson.domain;
 
 import java.util.List;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.ManyToMany;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "sys_role")
@@ -16,7 +11,7 @@ public class SysRole {
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Integer id;
   private String name;
-  @ManyToMany(mappedBy = "sysRoles")
+  @ManyToMany(mappedBy = "sysRoles",fetch= FetchType.EAGER)
   private List<SysUser> sysUsers;
 
   public Integer getId() {

@@ -7,11 +7,11 @@ import org.springframework.boot.autoconfigure.security.oauth2.resource.UserInfoT
 public class MyUserInfoTokenServices extends UserInfoTokenServices {
 
 
-    private SysUserDao sysUserDao;
+    //private SysUserDao sysUserDao;
 
-    private String oauth2Type;
-    public MyUserInfoTokenServices(String userInfoEndPointUrl, String clienId, AbstractPrincipalExtractor principalExtractor) {
-        super(userInfoEndPointUrl, clienId);
+    //private String oauth2Type;
+    public MyUserInfoTokenServices(String userInfoEndPointUrl, String clientId, AbstractPrincipalExtractor principalExtractor) {
+        super(userInfoEndPointUrl, clientId);
         super.setPrincipalExtractor(principalExtractor);
     }
 }

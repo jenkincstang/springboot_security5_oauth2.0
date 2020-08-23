@@ -6,7 +6,6 @@ import cn.hinson.security.service.MyUserInfoTokenServices;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.autoconfigure.security.oauth2.resource.UserInfoTokenServices;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
@@ -40,13 +39,16 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Resource
     OAuth2ClientContext oauth2ClientContext;
 
+    @Resource
+    MyLogoutSuccessHandler myLogoutSuccessHandler;
+
     @Bean
     UserDetailsService detailsService(){
         return new MyUserDetailsService();
     }
 
     @Autowired
-    SuccessHandler successHandler;
+    MyAuthenticationSuccessHandler myAuthenticationSuccessHandler;
 
     @Autowired
     TokenAuthorizationFilter tokenAuthorizationFilter;
@@ -56,17 +58,23 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         // @formatter:off
         Log logger = LogFactory.getLog(SecurityConfig.class);
         logger.info("HttpSecurity http");
-        http.antMatcher("/**").authorizeRequests()
-                .antMatchers("/","/register**","/login/github", "/login**", "/webjars/**").permitAll()
+        http.rememberMe().and().antMatcher("/**").authorizeRequests()
+                .antMatchers("/","/login/github", "/login", "/webjars/**","/test","/register.html").permitAll()
+                .antMatchers("/userManager","/sysManager")
+                .hasRole("ADMIN")
+                .antMatchers("/userInfo")
+                .hasAnyRole("ADMIN","USER")
                 .anyRequest().authenticated().and().exceptionHandling()
                 .and()
-                    .logout().
-                    logoutUrl("/logout").
-                    logoutSuccessUrl("/")
+                    .logout().logoutSuccessHandler(myLogoutSuccessHandler)
+
+                /*.logoutSuccessHandler(myLogoutSuccessHandler)*/
+                .deleteCookies("JSESSIONID")
+                /*.logoutSuccessHandler(myLogoutSuccessHandler)*/
                 .and()
                 .csrf().csrfTokenRepository(CookieCsrfTokenRepository.withHttpOnlyFalse()).and()
                 .addFilterBefore(ssoFilter(), BasicAuthenticationFilter.class)
-                .formLogin().successHandler(successHandler);
+                .formLogin().successHandler(myAuthenticationSuccessHandler).and();
         http.addFilterBefore(tokenAuthorizationFilter, UsernamePasswordAuthenticationFilter.class);
         // @formatter:on
     }
@@ -124,7 +132,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     private Filter ssoFilter(ClientResources client, String path, AbstractPrincipalExtractor principalExtractor) {
         OAuth2ClientAuthenticationProcessingFilter filter = new OAuth2ClientAuthenticationProcessingFilter(
                 path);
-        filter.setAuthenticationSuccessHandler(successHandler);
+        filter.setAuthenticationSuccessHandler(myAuthenticationSuccessHandler);
+
         OAuth2RestTemplate template = new OAuth2RestTemplate(client.getClient(), oauth2ClientContext);
         filter.setRestTemplate(template);
         UserInfoTokenServices tokenServices = new MyUserInfoTokenServices(client.getResource().getUserInfoUri(), client.getClient().getClientId(), principalExtractor);

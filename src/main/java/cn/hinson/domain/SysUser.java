@@ -11,15 +11,18 @@ public class SysUser {
     private Integer id;
     private String username;
     private String password;
+
+    private String email;
+
     @Column(name = "facebook_id")
     private String facebookId;
     @Column(name = "twitter_id")
     private String twitterId;
     @Column(name = "github_id")
     private String githubId;
-    @ManyToMany
-    @JoinTable(name = "sys_role_user",joinColumns = @JoinColumn(name = "sys_user_id"),
-        inverseJoinColumns = @JoinColumn(name = "sys_role_id"))
+    @ManyToMany(fetch=FetchType.EAGER)
+    @JoinTable(name = "sys_role_user", joinColumns = @JoinColumn(name = "sys_user_id"),
+            inverseJoinColumns = @JoinColumn(name = "sys_role_id"))
     private List<SysRole> sysRoles;
 
     public String getGithubId() {
@@ -76,5 +79,13 @@ public class SysUser {
 
     public void setSysRoles(List<SysRole> sysRoles) {
         this.sysRoles = sysRoles;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 }

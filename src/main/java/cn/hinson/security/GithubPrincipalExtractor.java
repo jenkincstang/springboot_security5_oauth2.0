@@ -26,7 +26,7 @@ public class GithubPrincipalExtractor extends AbstractPrincipalExtractor {
     public SysRole getUserRoleByOauth2ClientName() {
 //        SysRole role = new SysRole();
 //        role.setName("GITHUB");
-        System.out.println("ROLE_USER::>>"+sysRoleService.getSysRoleByName("ROLE_USER"));
-        return sysRoleService.getSysRoleByName("ROLE_USER");
+        System.out.println("ROLE_USER::>>"+sysRoleService.getSysRoleByName("ROLE_GITHUB"));
+        return sysRoleService.getSysRoleByName("ROLE_GITHUB");
     }
 }

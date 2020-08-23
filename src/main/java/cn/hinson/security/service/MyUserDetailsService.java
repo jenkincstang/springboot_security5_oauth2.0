@@ -25,7 +25,7 @@ public class MyUserDetailsService implements UserDetailsService { //自定义Use
   protected final Log logger = LogFactory.getLog(this.getClass());
 
   @Override
-  public UserDetails loadUserByUsername(String username) { //重写loadUserByUsername 方法获得 userdetails 类型用户
+  public UserDetails loadUserByUsername(String username) { //自定义认证
     System.out.println("loadUserByUserName: " + username);
     SysUser user = sysUserDao.findByUsername(username);
     if (user == null) {

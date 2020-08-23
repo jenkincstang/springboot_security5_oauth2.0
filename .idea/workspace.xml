@@ -20,22 +20,44 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ebeaace7-08c5-417e-a3b9-680caad470db" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/hinson/security/MyLogoutSuccessHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resource/static/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resource/static/register.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/hinson/controller/SysUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/hinson/controller/SysUserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/hinson/domain/SysRole.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/hinson/domain/SysRole.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/hinson/domain/SysUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/hinson/domain/SysUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/hinson/security/AbstractPrincipalExtractor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/hinson/security/AbstractPrincipalExtractor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/hinson/security/GithubPrincipalExtractor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/hinson/security/GithubPrincipalExtractor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/hinson/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/hinson/security/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/hinson/security/SuccessHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/hinson/security/SuccessHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/hinson/security/TokenAuthorizationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/hinson/security/TokenAuthorizationFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/hinson/security/SuccessHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/hinson/security/MyAuthenticationSuccessHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/hinson/security/service/MyUserDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/hinson/security/service/MyUserDetailsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/hinson/security/service/MyUserInfoTokenServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/hinson/security/service/MyUserInfoTokenServices.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resource/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resource/static/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/META-INF/spring-configuration-metadata.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/spring-configuration-metadata.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/cn/hinson/controller/SysUserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/hinson/controller/SysUserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/hinson/domain/SysRole.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/hinson/domain/SysRole.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/hinson/domain/SysUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/hinson/domain/SysUser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/hinson/security/AbstractPrincipalExtractor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/hinson/security/AbstractPrincipalExtractor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/hinson/security/GithubPrincipalExtractor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/hinson/security/GithubPrincipalExtractor.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/cn/hinson/security/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/hinson/security/SecurityConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/hinson/security/SuccessHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/hinson/security/SuccessHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/hinson/security/TokenAuthorizationFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/hinson/security/TokenAuthorizationFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/hinson/security/SuccessHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/hinson/security/service/MyUserInfoTokenServices.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/hinson/security/service/MyUserInfoTokenServices.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/springboot_security5_oauth2-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/springboot_security5_oauth2-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/springboot_security5_oauth2-1.0-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/springboot_security5_oauth2-1.0-SNAPSHOT.jar.original" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-cn.hinson.AppTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-cn.hinson.AppTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/cn.hinson.AppTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/cn.hinson.AppTest.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="MAKE_PROJECT_ON_SAVE" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -76,12 +98,12 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537871341178" />
     <property name="eu.ydp.idea.ts.spec.generator.settings.spec.template" value="import {$ClassName$} from '$TestsRelativePath$../src/$classRelativePath$/$ClassName$';&#10;&#10;describe('$ClassName$', () =&gt; {&#10;  let $ObjName$:$ClassName$;&#10;&#10;  beforeEach(() =&gt; {&#10;    $ObjName$ = new $ClassName$();&#10;  });&#10;&#10;  describe('', () =&gt; {&#10;    it('', () =&gt; {&#10;      // given&#10;&#10;      // when&#10;&#10;      // then&#10;    });&#10;  });&#10;});&#10;" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resource/static" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.repository.indices" />
+    <property name="settings.editor.selected.configurable" value="project.propCompiler" />
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -95,6 +117,7 @@
       <recent name="cn.hinson.security" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Tang\git-repo\springboot_security5_oauth2.0\src\main\resource\static" />
       <recent name="G:\JAVACODE\IntelliJ IDEA\springboot_security5_oauth2\src\main\java\cn\hinson\security" />
       <recent name="G:\JAVACODE\IntelliJ IDEA\springboot_security5_oauth2\src\main\java\cn\hinson" />
       <recent name="G:\JAVACODE\IntelliJ IDEA\springboot_security5_oauth2\src\main\java\cn\hinson\config" />
@@ -237,7 +260,10 @@
       <workItem from="1598018028364" duration="1438000" />
       <workItem from="1598021884231" duration="540000" />
       <workItem from="1598022435805" duration="11814000" />
-      <workItem from="1598066342267" duration="2906000" />
+      <workItem from="1598066342267" duration="3223000" />
+      <workItem from="1598112131374" duration="1808000" />
+      <workItem from="1598115294310" duration="2538000" />
+      <workItem from="1598147501978" duration="24818000" />
     </task>
     <servers />
   </component>

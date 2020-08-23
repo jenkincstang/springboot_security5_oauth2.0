@@ -39,8 +39,9 @@ public abstract class AbstractPrincipalExtractor implements PrincipalExtractor {
 //      // This Details object exposes a token that allows us to interact with Facebook on this user's behalf
 //      String token = ((OAuth2AuthenticationDetails) authentication.getDetails()).getTokenValue();
       user = new SysUser();
-      user.setUsername(map.get("id").toString());
+      user.setUsername(map.get("login").toString());
       user.setGithubId(id);
+      user.setEmail(map.get("email").toString());
       // Set the default Roles for users registered via Facebook
       List<SysRole> authorities = new ArrayList<>();
       SysRole role = sysRoleService.getSysRoleByName("ROLE_USER");
