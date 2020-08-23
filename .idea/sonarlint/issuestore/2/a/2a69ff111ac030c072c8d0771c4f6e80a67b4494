@@ -1,0 +1,12 @@
+
+D
+java:S1068".Remove this unused "oauth2Type" private field.(»·›Ò
+x
+java:S1128"]Remove this unused import 'org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder'.(åÅÚ…ûÿÿÿÿ
+E
+java:S1128"*Remove this unused import 'java.util.Map'.(¼è½Òşÿÿÿÿ
+P
+java:S1128"5Remove this unused import 'cn.hinson.domain.SysUser'.(İÈê“şÿÿÿÿ
+F
+java:S1068
+"+Remove this unused "userDao" private field.(­¶úÿÿÿÿ

@@ -50,7 +50,6 @@
       <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-cn.hinson.AppTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-cn.hinson.AppTest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/surefire-reports/cn.hinson.AppTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/cn.hinson.AppTest.txt" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -123,18 +122,6 @@
       <recent name="G:\JAVACODE\IntelliJ IDEA\springboot_security5_oauth2\src\main\java\cn\hinson\config" />
       <recent name="G:\JAVACODE\IntelliJ IDEA\springboot_security5_oauth2\src\main" />
     </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager" selected="Application.App">
     <configuration default="true" type="Applet">
@@ -230,7 +217,6 @@
       <item itemvalue="Application.App" />
       <item itemvalue="Application.TokenUtils" />
       <item itemvalue="JUnit.AppTest.shouldAnswerWithTrue" />
-      <item itemvalue="Spring Boot.App" />
     </list>
     <recent_temporary>
       <list>
@@ -280,13 +266,12 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="765" y="203" key="#com.intellij.ide.util.MemberChooser" timestamp="1598006752726">
@@ -301,22 +286,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1597970221134" />
-    <state width="1877" height="176" key="GridCell.Tab.0.bottom" timestamp="1598002543572">
+    <state width="1877" height="176" key="GridCell.Tab.0.bottom" timestamp="1598007464393">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="176" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1598002543572" />
-    <state width="1877" height="176" key="GridCell.Tab.0.center" timestamp="1598002543572">
+    <state width="1877" height="176" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1598007464393" />
+    <state width="1877" height="176" key="GridCell.Tab.0.center" timestamp="1598007464393">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="176" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1598002543572" />
-    <state width="1877" height="176" key="GridCell.Tab.0.left" timestamp="1598002543572">
+    <state width="1877" height="176" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1598007464393" />
+    <state width="1877" height="176" key="GridCell.Tab.0.left" timestamp="1598007464393">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="176" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1598002543572" />
-    <state width="1877" height="176" key="GridCell.Tab.0.right" timestamp="1598002543572">
+    <state width="1877" height="176" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1598007464393" />
+    <state width="1877" height="176" key="GridCell.Tab.0.right" timestamp="1598007464393">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="176" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1598002543572" />
+    <state width="1877" height="176" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1598007464393" />
     <state x="461" y="164" key="SettingsEditor" timestamp="1597984231680">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

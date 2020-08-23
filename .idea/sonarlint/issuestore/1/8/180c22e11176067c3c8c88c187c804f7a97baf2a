@@ -1,0 +1,24 @@
+
+b
+java:S1128"ERemove this unused import 'sun.java2d.pipe.SpanShapeRenderer.Simple'.(±Ëâ¿8È¦ÙúÀ.
+L
+java:S1128"/Remove this unused import 'java.util.Iterator'.(¥ÍòÕ8È¦ÙúÀ.
+m	java:S116#"QRename this field "SECRET" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ùÙ…8È¦ÙúÀ.
+>
+java:S1170#"!Make this final field static too.(ùÙ…8È¦ÙúÀ.
+C
+java:S1170&"!Make this final field static too.(¿¥şÒûÿÿÿÿ8È¦ÙúÀ.
+R
+java:S1191"5Use classes from the Java API instead of Sun classes.(±Ëâ¿8È¦ÙúÀ.
+}
+java:S1488="[Immediately return this expression instead of assigning it to the temporary variable "jwt".(ú˜É×øÿÿÿÿ8È¦ÙúÀ.
+L
+java:S37406"/Provide the parametrized type for this generic.(Õş£¼8È¦ÙúÀ.
+M
+java:S1128
+"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ8È¦ÙúÀ.
+{	java:S116&"ZRename this field "VALIDATE_MINUTE" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¿¥şÒûÿÿÿÿ8È¦ÙúÀ.
+M
+java:S1128"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ8È¦ÙúÀ.
+H
+java:S1612e",Replace this lambda with a method reference.(ÖöŒV8È¦ÙúÀ.
