@@ -7,9 +7,11 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="springboot_security5_oauth2" />
+        <module name="demo" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="8">
+      <module name="demo" target="1.8" />
       <module name="springboot_security5_oauth2" target="1.8" />
     </bytecodeTargetLevel>
   </component>

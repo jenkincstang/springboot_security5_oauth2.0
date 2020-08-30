@@ -108,11 +108,11 @@
 <!--      <version>${mybatis-spring.version}</version>-->
 <!--    </dependency>-->
     <!-- mysql数据库连接池 pool -->
-    <dependency>
+    <!--<dependency>
       <groupId>com.alibaba</groupId>
       <artifactId>druid</artifactId>
       <version>1.0.15</version>
-    </dependency>
+    </dependency>-->
     <!-- JWT -->
     <dependency>
       <groupId>com.auth0</groupId>
